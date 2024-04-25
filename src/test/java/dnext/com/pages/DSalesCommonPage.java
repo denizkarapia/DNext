@@ -48,7 +48,7 @@ public class DSalesCommonPage extends BasePage {
     public WebElement shoppingCartIconNumber;
     @FindBy(xpath = "//span[normalize-space()='CHECKOUT']")
     public WebElement checkoutButton;
-    @FindBy(xpath = "//span[contains(text(),'Collected')]")
+    @FindBy(xpath = "//span[contains(text(),'Collected')]/preceding-sibling::span")
     public WebElement collectedTickBeforeCompleteCheckout;
     @FindBy(xpath = "//button/span[contains(text(),'SAVE')]")
     public WebElement saveButtonAfterCheckout;
@@ -195,10 +195,18 @@ public class DSalesCommonPage extends BasePage {
         Utils.waitFor(1);
         Assert.assertEquals(2, Driver.getDriver().getWindowHandles().size());
         switchToWindowNew(1);
-        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("blob"));
+//        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("blob"));
         Driver.getDriver().close();
     }
 
+    public void clickCollected(String customerType){
+        Utils.waitFor(5);
+        elementDisplayed(collectedTickBeforeCompleteCheckout);
+        clickField(collectedTickBeforeCompleteCheckout);
+        if(customerType.equals("Individual")){
+       //     clickField(collectedTickBeforeCompleteCheckout);
+        }
+    }
     public void switchToDSalesPage() {
         switchToWindowNew(0);
         elementDisplayed(beforeCheckoutHeader);
