@@ -33,7 +33,6 @@ public class AddressInformationIndividualStepDefinition extends BasePage {
         clickField(addressInformationIndividualPage.backButtonOnAddressInformationOnIndividual);
     }
 
-
     @Given("User should see the Address Line 1 textbox in Address Information on Create Individual Customer page")
     public void userShouldSeeTheAddressLineOneTextboxInAddressInformationOnCreateIndividualCustomerPage() {
         elementDisplayed(addressInformationIndividualPage.billingAddressLineOneInputOnIndividual);
@@ -192,7 +191,7 @@ public class AddressInformationIndividualStepDefinition extends BasePage {
 
     @Then("User enters a value {string} in the Address Line 2 textbox for Service Address in Address Information on Create Individual Customer page")
     public void userEntersAValueInTheAddressLineTwoTextboxForServiceAddressInAddressInformationOnCreateIndividualCustomerPage(String address) {
-        addressInformationIndividualPage.fillInputField(addressInformationIndividualPage.serviceAddressLineTwoInputOnIndividual,address);
+        addressInformationIndividualPage.fillInputField(addressInformationIndividualPage.serviceAddressLineTwoInputOnIndividual, address);
     }
 
     @Given("User should see the Post Code textbox for Service Address in Address Information on Create Individual Customer page")
@@ -207,7 +206,7 @@ public class AddressInformationIndividualStepDefinition extends BasePage {
 
     @Then("User enters a value {string} in the Post Code textbox for Service Address in Address Information on Create Individual Customer page")
     public void userEntersAValueInThePostCodeTextboxForServiceAddressInAddressInformationOnCreateIndividualCustomerPage(String postCode) {
-        addressInformationIndividualPage.fillInputField(addressInformationIndividualPage.servicePostCodeInputOnIndividual,postCode);
+        addressInformationIndividualPage.fillInputField(addressInformationIndividualPage.servicePostCodeInputOnIndividual, postCode);
     }
 
     @Given("User should see the Country dropdown for Service Address in Address Information on Create Individual Customer page")

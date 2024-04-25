@@ -19,12 +19,10 @@ public class OtherInformationIndividualStepDefinition extends BasePage {
         clickField(otherInformationIndividualPage.otherInformationButton);
     }
 
-
     @When("User clicks Back button on Individual Other Information page")
     public void userClicksBackButtonOnIndividualOtherInformationPage() {
         clickField(otherInformationIndividualPage.backButtonOnOtherInformationPage);
     }
-
 
     @When("User selects the first checkbox about agreement on Individual Other Information Page")
     public void userSelectsTheFirstCheckboxAboutAgreement() {
@@ -178,5 +176,4 @@ public class OtherInformationIndividualStepDefinition extends BasePage {
     public void userShouldSeeTheSnakeMessage(String message) {
         otherInformationIndividualPage.verifyCustomerCreateSuccessMessage(message);
     }
-
 }

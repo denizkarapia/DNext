@@ -67,4 +67,4 @@ Feature:New Business Customer-Other Information
     Then  User should see the Generate Form open in a new window on Individual Other Information Page
     And   User go back to Individual Other Information Page
     And   User adds a valid "gdprForm.pdf" document for Consent Form on Individual Other Information Page
-    Then  User should see the name of "gdprForm.pdf" added pdf document on Individual Other Information Page
+    Then  User should see the name of "gdprForm.pdf" added pdf document on Individual Other Information Pag

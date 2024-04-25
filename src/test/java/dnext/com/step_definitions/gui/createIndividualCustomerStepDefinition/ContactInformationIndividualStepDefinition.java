@@ -29,7 +29,6 @@ public class ContactInformationIndividualStepDefinition extends BasePage {
         clickField(contactInformationIndividualPage.nextButtonOnContactInformationPage);
     }
 
-
     @And("User clicks Back button on Individual Contact Information Page")
     public void userClicksBackButtonOnIndividualContactInformationPage() {
         clickField(contactInformationIndividualPage.backButtonOnContactInformationPage);

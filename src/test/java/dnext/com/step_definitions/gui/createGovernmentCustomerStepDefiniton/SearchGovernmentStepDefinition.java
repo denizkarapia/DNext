@@ -13,8 +13,6 @@ import lombok.extern.log4j.Log4j2;
 public class SearchGovernmentStepDefinition extends BasePage {
     SearchGovernmentPage searchGovernmentPage;
 
-
-
     @And("User checks the NIPT is usable or not on Search Government page")
     public void userChecksTheNIPTIsUsableOrNotOnSearchGovernmentPage() {
         searchGovernmentPage.checkNIPTIsAvailableOrNot();

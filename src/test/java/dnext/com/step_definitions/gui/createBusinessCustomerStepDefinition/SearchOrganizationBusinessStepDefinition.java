@@ -14,7 +14,6 @@ import lombok.extern.log4j.Log4j2;
 @Log4j2
 public class SearchOrganizationBusinessStepDefinition extends BasePage {
     private SearchOrganizationBusinessPage searchOrganizationBusinessPage;
-    private CustomerCommonPage customerCommonPage;
 
     @Given("User should see the {string} on Create Business Customer page")
     public void user_should_see_the_on_create_business_customer_page(String pageUrl) {
@@ -80,7 +79,6 @@ public class SearchOrganizationBusinessStepDefinition extends BasePage {
     public void userEntersRandomNIPTForALBANIANToTheNIPTNumberField() {
         searchOrganizationBusinessPage.fillNIPTFieldWithRandomAlbanianNumber();
     }
-
 
     @And("User checks the NIPT is usable or not on Search Business page")
     public void userChecksTheNIPTIsUsableOrNotOnSearchBusinessPage() {

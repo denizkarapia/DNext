@@ -48,12 +48,12 @@ public class GeneralInformationIndividualStepDefinition extends BasePage {
 
     @Then("User should see that background is red of the firstname picture on New Individual Customer page")
     public void userShouldSeeThatBackgroundIsRedOfTheFirstnamePictureOnNewIndividualCustomerPage() {
-        warningBackgroundRedColorOne(generalInformationIndividualPage.firstNamePicture,true);
+        warningBackgroundRedColorOne(generalInformationIndividualPage.firstNamePicture, true);
     }
 
     @Then("User should see that background is red of the lastname picture on New Individual Customer page")
     public void userShouldSeeThatBackgroundIsRedOfTheLastnamePictureOnNewIndividualCustomerPage() {
-        warningBackgroundRedColorOne(generalInformationIndividualPage.lastNamePicture,true);
+        warningBackgroundRedColorOne(generalInformationIndividualPage.lastNamePicture, true);
     }
 
     @Then("User should see the left space at the beginning of firstname is eliminated on New Individual Customer page")
@@ -66,7 +66,6 @@ public class GeneralInformationIndividualStepDefinition extends BasePage {
     public void userShouldSeeTheLeftSpaceAtTheBeginningOfLastnameIsEliminatedOnNewIndividualCustomerPage() {
         performKeyboardAction(Keys.TAB);
         assertEquals("SUNAL", getValueByJS("lastName"));
-
     }
 
     @Then("User should not be allowed to write more than one spaced firstname nouns into the firstname field on New Individual Customer page")
@@ -92,7 +91,7 @@ public class GeneralInformationIndividualStepDefinition extends BasePage {
 
     @Then("User should see that background is red of middle name  picture on New Individual Customer page")
     public void userShouldSeeThatBackgroundIsRedOfMiddleNamePictureOnNewIndividualCustomerPage() {
-        warningBackgroundRedColorOne(generalInformationIndividualPage.middleNamePicture,true);
+        warningBackgroundRedColorOne(generalInformationIndividualPage.middleNamePicture, true);
     }
 
     @Then("User should see the left space at the beginning of middle name is eliminated on New Individual Customer page")
@@ -113,7 +112,7 @@ public class GeneralInformationIndividualStepDefinition extends BasePage {
 
     @And("User should see that background is red on email field on New Individual Customer page")
     public void userShouldSeeThatBackgroundIsRedOnEmailFieldOnNewIndividualCustomerPage() {
-        warningBackgroundRedColorOne(generalInformationIndividualPage.emailFieldPicture,true);
+        warningBackgroundRedColorOne(generalInformationIndividualPage.emailFieldPicture, true);
     }
 
     @Given("User enters valid {string} in to the email field on New Individual Customer page")
@@ -138,7 +137,7 @@ public class GeneralInformationIndividualStepDefinition extends BasePage {
 
     @And("User should see that background is red on birth date on New Individual Customer page")
     public void userShouldSeeThatBackgroundIsRedOnBirthDateOnNewIndividualCustomerPage() {
-        warningBackgroundRedColorOne(generalInformationIndividualPage.birthDateFieldPicture,true);
+        warningBackgroundRedColorOne(generalInformationIndividualPage.birthDateFieldPicture, true);
     }
 
     @And("User deletes the already entered invalid date of birth on New Individual Customer page")
@@ -163,7 +162,7 @@ public class GeneralInformationIndividualStepDefinition extends BasePage {
 
     @And("User adds {string} the Mobile Phone Number into the Mobile Phone Number on New Individual Customer page")
     public void userAddsTheMobilePhoneNumberIntoTheMobilePhoneNumberOnNewIndividualCustomerPage(String mobilePhoneNumber) {
-        sendKeys(generalInformationIndividualPage.mobilePhoneNumberField,mobilePhoneNumber);
+        sendKeys(generalInformationIndividualPage.mobilePhoneNumberField, mobilePhoneNumber);
     }
 
     @Given("User clicks Communication Method dropdown on New Individual Customer page")
@@ -256,5 +255,30 @@ public class GeneralInformationIndividualStepDefinition extends BasePage {
     @Then("User should see that background is red for the Citizenship dropdown")
     public void userShouldSeeThatBackgroundIsRedForTheCitizenshipDropdown() {
         warningBackgroundRedColorOne(generalInformationIndividualPage.citizenShipFieldBackground, true);
+    }
+
+    @And("User enters {string} place of birth on Individual General Information page")
+    public void userEntersPlaceOfBirthOnIndividualGeneralInformationPage(String place) {
+        sendKeys(generalInformationIndividualPage.placeOfBirthField, place);
+    }
+
+    @Given("User should see Mobile Phone Number textbox on Individual General Information page")
+    public void userShouldSeeMobilePhoneNumberTextboxOnIndividualGeneralInformationPage() {
+        elementDisplayed(generalInformationIndividualPage.mobilePhoneNumberField);
+    }
+
+    @When("User clicks Country Code dropdown on Individual General Information page")
+    public void userClicksCountryCodeDropdownOnIndividualGeneralInformationPage() {
+        clickField(generalInformationIndividualPage.countryCodeDropdown);
+    }
+
+    @And("User selects {string} option in the Country Code dropdown on Individual General Information page")
+    public void userSelectsOptionInTheCountryCodeDropdownOnIndividualGeneralInformationPage(String countryCode) {
+        selectSpecificOptionFromDropdown(countryCode);
+    }
+
+    @And("User clicks mobile phone number field on Individual General Information page")
+    public void userClicksMobilePhoneNumberFieldOnIndividualGeneralInformationPage() {
+        clickField(generalInformationIndividualPage.mobilePhoneNumberField);
     }
 }

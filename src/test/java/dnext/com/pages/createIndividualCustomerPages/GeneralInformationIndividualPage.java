@@ -11,13 +11,11 @@ import org.openqa.selenium.support.FindBy;
 
 @Log4j2
 public class GeneralInformationIndividualPage extends BasePage {
-
+    CustomerFakerDataCreator customerFakerDataCreator = new CustomerFakerDataCreator();
     @FindBy(xpath = "//div[contains(text(),'General Information')]//ancestor::mat-step-header")
     public WebElement generalInformationButtonSelectedLabel;  // aria-selected : true will be validated
-
     @FindBy(xpath = "//input[@formcontrolname='personalNumber']")
     public WebElement identificationNumberField;
-
     @FindBy(xpath = "//*[@id='firstName']")
     public WebElement firstNameFieldOn;
     @FindBy(xpath = "//*[@id='lastName']")
@@ -62,6 +60,8 @@ public class GeneralInformationIndividualPage extends BasePage {
     public WebElement placeOfBirthField;
     @FindBy(xpath = "//span[normalize-space()='BERAT']")
     public WebElement beratCityFromPlaceOfBirthDropdown;
+    @FindBy(xpath = "//following::*[@formcontrolname='phoneCode']")
+    public WebElement countryCodeDropdown;
     @FindBy(xpath = "//*[@formcontrolname = 'phoneNumber']")
     public WebElement mobilePhoneNumberField;
     @FindBy(xpath = "//*[@formcontrolname='communicationMethod']")
@@ -72,8 +72,6 @@ public class GeneralInformationIndividualPage extends BasePage {
     public WebElement segmentDropdownBoxOnIndividual;
     @FindBy(xpath = "//div[contains(text(),'General Information')]//ancestor::*[@aria-selected='true']")
     public WebElement selectedGeneralInformationOnIndividual;
-
-    CustomerFakerDataCreator customerFakerDataCreator = new CustomerFakerDataCreator();
 
     public void enterInvalidFormatEmailsOnIndividual(String email) {
         Utils.sendKeys(emailFieldOnIndividual, email + Keys.TAB);
@@ -106,30 +104,28 @@ public class GeneralInformationIndividualPage extends BasePage {
         beratCityFromPlaceOfBirthDropdown.click();
     }
 
-
-    public void fillFirstNameWithRandomString(){
+    public void fillFirstNameWithRandomString() {
         sendKeys(firstNameFieldOn,
                 customerFakerDataCreator.firstNameFromFaker());
     }
 
-    public void fillLastNameWithRandomString(){
+    public void fillLastNameWithRandomString() {
         sendKeys(lastNameField,
                 customerFakerDataCreator.lastNameFromFaker() + " AUTOMATION");
     }
 
-    public void fillEmailWithRandomEmail(){
+    public void fillEmailWithRandomEmail() {
         sendKeys(emailFieldOnIndividual,
                 customerFakerDataCreator.emailFromFaker());
     }
 
-    public void fillBirthDateWithRandomDate(){
+    public void fillBirthDateWithRandomDate() {
         sendKeys(birthDateField,
                 customerFakerDataCreator.birthDateFromFaker());
     }
 
-    public void fillPhoneNumberWithRandomNumber(){
+    public void fillPhoneNumberWithRandomNumber() {
         sendKeys(mobilePhoneNumberField,
                 customerFakerDataCreator.phoneFromFaker());
     }
-
 }

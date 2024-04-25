@@ -103,5 +103,4 @@ public class AdminInformationNewCustomerStepDefinition extends BasePage {
     public void userDeletesTheAlreadyEnteredInvalidDateOfBirthOnAdminInformationPage() {
         adminInformationBusinessPage.cancelButtonOnDateOfbirthField.click();
     }
-
 }

@@ -33,7 +33,6 @@ public class ContactInformationBusinessStepDefinition extends BasePage {
         clickField(contactInformationBusinessPage.backButtonOnContactInformationPage);
     }
 
-
     @Given("User should see the Type of Contact dropdown on Contact Information Page")
     public void userShouldSeeTheTypeOfContactDropdown() {
         elementDisplayed(contactInformationBusinessPage.typeOfContactDropdown);

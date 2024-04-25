@@ -86,4 +86,4 @@ Feature:New Individual Customer-Invoice Account
     And   User enters invalid "41234567" phone numbers on Individual Invoice Account page
     Then  User should see "Phone number must be like 6XXXXXXXX !" message under mobile phone number field on Individual Invoice Account page
     And   User enters valid "628641593" into the phone number field on Individual Invoice Account page
-    Then  User should not see the warning message on phone field on Individual Invoice Account page
+    Then  User should not see the warning message on phone field on Individual Invoice Account pag

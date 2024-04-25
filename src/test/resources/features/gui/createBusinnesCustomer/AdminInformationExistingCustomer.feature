@@ -32,7 +32,6 @@ Feature: Existing Customer-Admin Information-Existing Customer
     Given User clicks the search icon in Identification Number field on Admin Information page
     And   User enters "alibaba11@gmail.com" on email field  and "624687659" to the phone number field
 
-
   @smoke @addingFileForBusinessAdmin
   Scenario:As a user I want to add only one file which could be pdf and image format with smaller than 5MB on Admin Information page
     Given User clicks the search icon in Identification Number field on Admin Information page
@@ -53,6 +52,3 @@ Feature: Existing Customer-Admin Information-Existing Customer
     And   User enters "alibaba11@gmail.com" on email field  and "624687659" to the phone number field
     And   User clicks next Button on Admin Information Page
     Then  User should see the "Contact Information" tab is opened
-
-
-

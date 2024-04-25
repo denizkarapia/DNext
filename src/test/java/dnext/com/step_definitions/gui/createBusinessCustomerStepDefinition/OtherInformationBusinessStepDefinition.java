@@ -20,7 +20,6 @@ public class OtherInformationBusinessStepDefinition extends BasePage {
         uploadFile(otherInformationBusinessPage.addDocumentButtonOnOtherInformation, otherInformationBusinessPage.fileInputGeneralOnOtherInformation, file);
     }
 
-
     @Then("User should see the name of {string} added jpg document on the screen on Other Information page")
     public void userShouldSeeTheNameOfAddedJpgDocumentOnTheScreenOnOtherInformationPage(String fileName) {
         Assert.assertEquals(" ConsentForm-" + fileName, otherInformationBusinessPage.nameOfUploadedFileOnOther.getText());

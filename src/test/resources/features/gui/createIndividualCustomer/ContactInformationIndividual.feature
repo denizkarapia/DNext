@@ -65,7 +65,6 @@ Feature:New Individual Customer-Contact Information
     When  User clicks Next button on Individual Contact Information Page
     Then  User should see the "Invoice Account" tab is opened
 
-
   @addDifferentTypeOfAuthorizationForIndividualContact
   Scenario Outline: As a user I want to add different type of Authorizations on Individual Contact Information Page
     Given User should see the Type of Authorization dropdown on Individual Contact Information Page
@@ -182,7 +181,6 @@ Feature:New Individual Customer-Contact Information
       | Contact Person      |
       | Payment Responsible |
       | Technical Contact   |
-
 
   @addMultipleContactForIndividualCustomer
   Scenario: As a user I want to add Multiple Contacts on Individual Contact Information Page

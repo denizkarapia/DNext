@@ -28,7 +28,6 @@ Feature:Admin Information-New Customer Creation
     Given User enters valid "abc123@gmail.com" in to the email field on  Admin Information Page
     Then  User should see "." and "@" and "abc123@gmail.com" inside of email structure on Admin Information Page
 
-
   @fillingOtherFieldsForBusinessAdmin
   Scenario:As a user I want to fill the gender,birth date ,citizenship, country ,place of birth fields and work phone number into the related fields on Admin Information Page
     Given User Male option from gender on Admin Information Page

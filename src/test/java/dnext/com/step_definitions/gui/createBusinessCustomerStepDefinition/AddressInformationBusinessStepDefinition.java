@@ -20,7 +20,6 @@ public class AddressInformationBusinessStepDefinition extends BasePage {
         clickField(addressInformationBusinessPage.addressInformationButton);
     }
 
-
     @And("User clicks Next button on Address Information Page")
     public void userClicksNextButtonOnAddressInformationPage() {
         clickField(addressInformationBusinessPage.nextButtonOnAddressInformationPage);

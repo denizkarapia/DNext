@@ -17,8 +17,6 @@ public class SearchIndividualStepDefinition extends BasePage {
     SearchIndividualPage searchIndividualPage;
     GeneralInformationIndividualPage generalInformationIndividualPage;
 
-
-
     @Given("User enters {string} existing identification ID in to identification number field on Create Individual Customer page")
     public void userEntersIdentificationIDInToIdentificationNumberFieldOnCreateIndividualCustomerPage(String idNumber) {
         sendKeys(searchIndividualPage.identificationNumberBtnOnSearchIndividualHomePage, idNumber);
@@ -27,7 +25,6 @@ public class SearchIndividualStepDefinition extends BasePage {
     @And("User clicks search button on Create Individual Customer page")
     public void userClicksSearchButtonOnCreateIndividualCustomerPage() {
         clickField(searchIndividualPage.searchBtnOnSearchIndividualHomePage);
-
     }
 
     @Then("User should see {string} on Create Individual Customer page")
@@ -40,17 +37,14 @@ public class SearchIndividualStepDefinition extends BasePage {
         clickField(searchIndividualPage.nextBtnOnSearchIndividualHomePage);
     }
 
-
     @And("User clicks Citizenship dropdown on Create Individual Customer page")
     public void userClicksCitizenshipDropdownOnCreateIndividualCustomerPage() {
         clickField(generalInformationIndividualPage.citizenShipField);
-
     }
 
     @And("User selects ALBANIAN citizenship from dropdown on Create Individual Customer page")
     public void userSelectsALBANIANCitizenshipFromDropdownOnCreateIndividualCustomerPage() {
         clickField(generalInformationIndividualPage.albanianOptionForCitizenship);
-
     }
 
     @Given("User enters {string} identification ID for ALBANIAN to the identification number field on Create Individual Customer page")
@@ -83,4 +77,3 @@ public class SearchIndividualStepDefinition extends BasePage {
         searchIndividualPage.verifyCustomerIsNew();
     }
 }
-

@@ -1,4 +1,5 @@
 package dnext.com.step_definitions.gui.createBusinessCustomerStepDefinition;
+
 import com.utilities.Utils;
 import dnext.com.pages.BasePage;
 import dnext.com.pages.createBusinessCustomerPages.GeneralInformationBusinessPage;
@@ -26,7 +27,6 @@ public class GeneralInformationBusinessStepDefinition extends BasePage {
     @Given("User clicks Name Field on general information page")
     public void user_clicks_name_field() {
         clickField(generalInformationBusinessPage.organizationNameInput);
-
     }
 
     @Then("User enters a value {string} consisting of letters and special characters in the name box on general information page")
@@ -67,7 +67,6 @@ public class GeneralInformationBusinessStepDefinition extends BasePage {
     @Given("User clicks Tax Exempt dropdown on general information page")
     public void userClicksTaxExemptDropdown() {
         clickField(generalInformationBusinessPage.taxExemptDropdownBox);
-
     }
 
     @And("User should ensure each options in Tax Exempt dropdown are selectable on general information page")
@@ -105,7 +104,7 @@ public class GeneralInformationBusinessStepDefinition extends BasePage {
 
     @Then("User should see {string} and {string} and {string} inside of email structure on general information page")
     public void userShouldSeeAndAndInsideOfEmailStructure(String dotSign, String tagSign, String email) {
-        generalInformationBusinessPage.verifyValidFormatEmail(dotSign, tagSign, email);
+        verifyValidFormatEmail(dotSign, tagSign, email);
     }
 
     @Given("User clicks Communication Method dropdown on general information page")
@@ -126,7 +125,6 @@ public class GeneralInformationBusinessStepDefinition extends BasePage {
     @Then("User should selects +355 option from country code dropdown on general information page")
     public void userShouldSelectsOptionFromCountryCodeDropdown() {
         clickField(generalInformationBusinessPage.albanianCountryCode);
-
     }
 
     @Then("User clicks mobile phone numbers field on general information page")
@@ -137,7 +135,6 @@ public class GeneralInformationBusinessStepDefinition extends BasePage {
     @And("User enters invalid {string} phone numbers and should see {string} under mobile phone number field on general information page")
     public void userEntersInvalidPhoneNumbersAndShouldSeeUnderMobilePhoneNumberField(String invalidMobile, String warningMessage) {
         generalInformationBusinessPage.verifyEnterInvalidFormatMobilePhoneNumber(invalidMobile, warningMessage);
-
     }
 
     @Then("User should selects +213 option from country code dropdown except Albania and clicks mobile phone numbers field on general information page")
@@ -184,13 +181,12 @@ public class GeneralInformationBusinessStepDefinition extends BasePage {
 
     @And("User deletes added image document on general information page")
     public void userDeletesAddedImageDocumentOnGeneralInformationPage() {
-        clickField( generalInformationBusinessPage.deleteDocumentButton);
+        clickField(generalInformationBusinessPage.deleteDocumentButton);
     }
 
     @And("User adds a {string} of which format is pdf with bigger five MB should see the {string} warning messageon general information page")
     public void userAddsAOfWhichFormatIsPdfWithBiggerFiveMBShouldSeeTheWarningMessageonGeneralInformationPage(String fileNameOfPdf, String warningMessage) {
         generalInformationBusinessPage.verifyTheUploadedBigger5MbSizeFile(fileNameOfPdf, warningMessage);
-
     }
 
     @And("User adds a document of which format is {string} on general information page")
@@ -202,7 +198,6 @@ public class GeneralInformationBusinessStepDefinition extends BasePage {
     public void userShouldSeeWarningMessageOnTopOfTheScreenForUnmatchedFormatOnGeneralInformationPage(String warningMessage) {
         warningMessage(warningMessage, generalInformationBusinessPage.warningMessageForUnmatchedDocument);
     }
-
 
     @When("User enters random organization name on Business General Information page")
     public void userEntersRandomOrganizationName() {

@@ -10,7 +10,6 @@ Feature:New Individual Customer - General Information
     Given User enters "K12345678R" identification ID for ALBANIAN to the identification number field on Create Individual Customer page
     And   User clicks search button on Create Individual Customer page
     And   User clicks next Button in Search Individual on Create Individual Customer page
-    #Given I click General Information on new business customer page
 
   Scenario: As a user, I want to check invalid inputs for Firstname and Lastname fields
     Given User wants to enter "1235Ali" as firstname on New Individual Customer page
@@ -67,7 +66,23 @@ Feature:New Individual Customer - General Information
     And   User selects of valid birth date as "15/05/2000" on New Individual Customer page
     And   User clicks Citizenship dropdown on Create Individual Customer page
     And   User selects ALBANIAN citizenship from dropdown on Create Individual Customer page
-    Then  User should see background is not red on Create Individual Customer page
-    And   User selects the country as Albania as country of birth on New Individual Customer page
-    And   User selects Berat as place of birth on New Individual Customer page
-    And   User adds "623456789" the Mobile Phone Number into the Mobile Phone Number on New Individual Customer page
+    #And   User adds "623456789" the Mobile Phone Number into the Mobile Phone Number on New Individual Customer page
+
+  Scenario: As a user I want to fill the Country of Birth fields and Place of Birth into the related fields on New Individual Customer page
+    And   User selects "ALBANIA" as country of birth on Individual General Information page
+    And   User selects random place of birth on Individual General Information page
+    #And   User selects the country as Albania as country of birth on New Individual Customer page
+    #And   User selects Berat as place of birth on New Individual Customer page
+    And   User selects "TURKEY" as country of birth on Individual General Information page
+    And   User enters "ISTANBUL" place of birth on Individual General Information page
+
+  Scenario: As a user I want to fill the work phone number into the related fields on New Individual Customer page
+    Given  User should see Mobile Phone Number textbox on Individual General Information page
+    When  User clicks Country Code dropdown on Individual General Information page
+    And   User selects "+355" option in the Country Code dropdown on Individual General Information page
+    And   User clicks mobile phone number field on Individual General Information page
+    And   User enters random mobile phone number on Individual General Information page
+    When  User clicks Country Code dropdown on Individual General Information page
+    And   User selects "+90" option in the Country Code dropdown on Individual General Information page
+    And   User clicks mobile phone number field on Individual General Information page
+    And   User enters random mobile phone number on Individual General Information page

@@ -124,4 +124,3 @@ Feature:New Business Customer-Customer Creation
     When  User clicks Save button on Individual Other Information page
     Then  User should see the "Customer created successfully" snake message
     Then  User should be  General part  under  Main page  button on Customer360 search page
-
